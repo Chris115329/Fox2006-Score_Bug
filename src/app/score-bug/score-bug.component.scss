@@ -1,0 +1,152 @@
+.wrapper {
+  width: 100%;
+  height: 100vh; /* Full screen height */
+ 
+  display: flex;
+  justify-content: center; /* Horizontally centers .score-bug */
+  align-items: center; /* Vertically centers .score-bug */
+}
+
+.score-bug {
+  display: flex;
+  justify-content: center; /* Center items horizontally within the score bug */
+  align-items: center; /* Vertically aligns content within the score bug */
+  background-color: rgba(240, 242, 248, 1); /* grayish-blue shade. */
+  color: white;
+  padding: 5px 10px; /* Adds some internal spacing */
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  width: 1000px; /* Adjust width to your liking */
+  height: 1%; /* Allow it to grow based on content */
+  z-index: 9999;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow */
+  border-radius: 0px; /* Keep square edges */
+  border: 1px solid #000; /* Adds a black border around the score bug */
+}
+
+.score-bug-center {
+  display: flex;
+  flex-direction: row; /* Ensures team names and scores are in one row */
+  align-items: center;
+  gap: 10px; /* Adds spacing between the team name and score */
+}
+
+.team-name {
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  color: white;
+  background-color: red;
+  padding: 3px;
+  font-size: 17pt;
+  text-align: center;
+  width: 40px; /* Ensures consistent width */
+  height:15px;
+
+  /* New properties for text positioning */
+  line-height: 18px; /* Matches the height to vertically center text */
+  vertical-align: middle; /* Ensures proper alignment of text */
+  position: relative; /* Enables fine-tuning with top */
+  top: -1px; /* Slightly moves the text upward */
+  
+  
+  
+}
+
+.team-name2 {
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  color: white;
+  background-color: blue;
+  padding: 3px;
+  font-size: 17pt;
+  text-align: center;
+  width: 40px; /* Ensures consistent width */
+  height:15px;
+
+  /* New properties for text positioning */
+  line-height: 18px; /* Matches the height to vertically center text */
+  vertical-align: middle; /* Ensures proper alignment of text */
+  position: relative; /* Enables fine-tuning with top */
+  top: -1px; /* Slightly moves the text upward */
+}
+
+.score {
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  font-size: 17pt !important;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  width: 10px;
+}
+
+.inning-info {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between image and text */
+  border-left:  0.5px solid #ccc; /* Subtle gray border */
+  border-right:  0.5px solid #ccc; /* Subtle gray border */
+  padding-right: 21px; /* Moves the border-right farther to the right */
+  height: 20px; 
+}
+
+.inning-icon {
+  width: 20px; /* Control the size of the icon */
+  height: 20px;
+}
+
+.bases-icon {
+ margin-top:-19px;
+}
+
+
+.outs {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+  font-size: 17pt !important;
+  font-weight: bold;
+  color: black;
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  border-left:  0.5px solid #ccc; /* Subtle gray border */
+  border-right:  0.5px solid #ccc; /* Subtle gray border */
+  height: 20px; 
+}
+
+.count {
+  display: flex;
+  justify-content: center; /* Horizontally center the text */
+  align-items: center;
+  font-size: 17pt !important;
+  font-weight: bold;
+  color: black;
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  border-left:  0.5px solid #ccc; /* Subtle gray border */
+  border-right:  0.5px solid #ccc; /* Subtle gray border */
+  height: 20px; 
+  width:40px;
+  
+}
+
+
+
+
+
+
+/* Animated Border */
+@keyframes slideBorder {
+  0% {
+    border-left: 3px solid silver;
+    border-right: 0 solid silver;
+  }
+  50% {
+    border-left: 0 solid silver;
+    border-right: 0 solid silver;
+  }
+  100% {
+    border-left: 0 solid silver;
+    border-right: 3px solid silver;
+  }
+}
+
+/* Apply the animation */
+.score-bug.animate-border {
+  animation: slideBorder 1s ease-in-out;
+}

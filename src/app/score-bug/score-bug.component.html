@@ -1,0 +1,44 @@
+<br>
+<div class ="wrapper"> 
+<div class="score-bug">
+  <div class="score-bug-center">
+  <!--   <div class="inning-info">
+      <img [src]="basesIcon" alt="bases" class="bases-icon"  />
+     
+     </div>
+     -->
+ <div class="team-name">{{ team1NameAbb }} </div>
+ <div class="score"> {{ team1Score }} </div>
+ <div class="team-name2">{{ team2NameAbb }} </div>
+ <div class="score"> {{ team2Score }} </div>
+ <div class="inning-info">
+  <img [src]="inningIcon" alt="Inning" class="inning-icon" />
+  <span class = "score"> {{ inningWithAbb }} </span>
+ </div>
+<div class ="outs"> {{outs}} out   </div>
+<div class ="count"> {{count}}   </div>
+</div>
+</div> 
+
+<div> 
+
+  &nbsp; &nbsp; &nbsp;
+  <input type="button" value="Ball" (click)="handleCount('BALL')">
+  &nbsp; &nbsp;
+  <input type="button" value="Strike" (click)="handleCount('STRIKE')">
+  &nbsp; &nbsp; &nbsp;
+  <input type="button" value="Go to next half inning" (click)="handleInning(true)">
+  &nbsp; &nbsp; 
+  <input type="button" value="Record Out" (click)="handleOut()">
+  &nbsp; &nbsp; 
+  <input type="button" value="Score Run" (click)="scoreRun()">
+  </div>
+
+ 
+
+
+</div>
+
+
+
+
